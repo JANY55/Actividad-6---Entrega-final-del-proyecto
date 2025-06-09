@@ -1,0 +1,286 @@
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+form, main {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 20px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  main {
+    margin-top: 80px;
+  }
+  
+header button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  background: #4a69bd;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+header button:hover {
+  background: #2e59d9;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4a69bd;
+}
+
+button[type="submit"],
+form button {
+  width: 100%;
+  background: #38ada9;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover,
+form button:hover {
+  background: #079992;
+}
+
+#error {
+  text-align: center;
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+main section {
+  display: none;
+}
+
+main section:target {
+  display: block;
+}
+
+  <style>
+    :root {
+      --azul-petroleo: #1b3b4d;
+      --azul-claro: #3f6474;
+      --fondo-claro: #f4f7f9;
+      --blanco: #ffffff;
+      --verde: #2ecc71;
+      --gris-claro: #f1f1f1;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--fondo-claro);
+      color: #333;
+    }
+
+    header {
+      background-color: var(--azul-petroleo);
+      color: var(--blanco);
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header img {
+      max-width: 100px; /* Tamaño incrementado del logo */
+      margin-right: 20px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    section {
+      background-color: var(--blanco);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+      transition: box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra al pasar el mouse */
+    }
+
+    h2 {
+      color: var(--azul-petroleo);
+      font-size: 1.5rem;
+      border-bottom: 2px solid var(--azul-petroleo);
+      padding-bottom: 5px;
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+      color: var(--azul-petroleo);
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: var(--azul-petroleo);
+      color: white;
+      border: none;
+      margin-top: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--azul-claro);
+    }
+
+    .oculto {
+      display: none;
+    }
+
+    .flecha {
+      background: rgba(0, 0, 0, 0.1);
+      border: none;
+      color: var(--azul-petroleo);
+      font-size: 1.5rem;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .flecha:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .superior-izq {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .inferior-der {
+      text-align: right;
+      margin-top: 1rem;
+    }
+
+    /* Estilo para los elementos de la lista de docentes */
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: var(--gris-claro);
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+
+    li:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilos para dispositivos móviles */
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.2rem;
+      }
+
+      main {
+        padding: 1rem;
+        max-width: 100%;
+      }
+
+      section {
+        padding: 1rem;
+      }
+
+      .flecha {
+        font-size: 1.2rem;
+        padding: 0.3rem 0.6rem;
+      }
+    }
+  </style>
